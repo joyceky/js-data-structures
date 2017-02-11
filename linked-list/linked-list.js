@@ -88,3 +88,17 @@ LinkedList.prototype.removeTail = function() {
 // console.log(myLinkedList);
 // myLinkedList.removeTail();
 // console.log(myLinkedList);
+
+LinkedList.prototype.search = function(searchVal) {
+  let currentNode = this.head;
+  while (currentNode) {
+    if (currentNode.value === searchVal) {
+      return currentNode.value;
+    }
+    currentNode = currentNode.next;
+  }
+};
+// 
+// myLinkedList.addToTail("Green");
+// console.log(myLinkedList.search("Green"));
+// console.log(myLinkedList);
